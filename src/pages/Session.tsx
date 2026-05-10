@@ -82,7 +82,7 @@ const Session = () => {
   const stompClientRef = useRef<Client | null>(null);
 
   useEffect(() => {
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    const API_URL = import.meta.env.VITE_API_URL || 'https://virtuallab-1atg.onrender.com';
     const socket = new SockJS(`${API_URL}/ws`);
     const client = new Client({
       webSocketFactory: () => socket,
